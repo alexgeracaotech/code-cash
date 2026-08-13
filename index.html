@@ -2,6 +2,18 @@
   <head>
     <meta charset='utf-8' />
     <title>Code Cash</title>
-    <script></script>
+    <script>
+
+      const name = window.prompt('Digite seu nome:');  
+
+      if (name) {
+        window.alert(`Olá, ${name}! Seja bem vindo ao Code Cash.`);
+      } else if (name === '') {
+        window.alert('Olá! Seja bem vindo ao Code Cash.');      
+      } else {
+        window.alert('Operação cancelada.');
+      }
+      
+    </script>
   </head>
 </html>
