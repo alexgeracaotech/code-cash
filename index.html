@@ -3,16 +3,25 @@
     <meta charset='utf-8' />
     <title>Code Cash</title>
     <script>
+          
+      function greet() {
+        const name = prompt('Digite seu nome:');
 
-      const name = window.prompt('Digite seu nome:');  
-
-      if (name) {
-        window.alert(`Olá, ${name}! Seja bem vindo ao Code Cash.`);
-      } else if (name === '') {
-        window.alert('Olá! Seja bem vindo ao Code Cash.');      
-      } else {
-        window.alert('Operação cancelada.');
+        if (name === '') {
+          return alert(
+            'Olá! Seja bem vindo ao Code Cash.'
+          ); 
+        } else if (name === null) {
+          return alert ('Operação cancelada.');
+        } else if (!isNaN(Number(name))) {
+          alert('Digite um valor válido.');
+          return greet();
+        }
+        
+        alert(`Olá, ${name}! Seja bem vindo ao Code Cash.`);
       }
+
+      greet();
       
     </script>
   </head>
